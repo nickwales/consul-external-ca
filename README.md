@@ -29,12 +29,11 @@ If you are using auto_config then the agents use mesh certificates too. So those
 
 ### Links
 
+[Documentation from unmerged PR](https://github.com/hashicorp/consul/blob/d9185d2a96c68fdb2b413f1d929624da6b1e0906/website/content/docs/connect/ca/vault.mdx#using-an-external-root-ca)
+
 [Custom private key with Consul CA (not Vault)](https://developer.hashicorp.com/consul/docs/secure-mesh/certificate/built-in#specifying-a-custom-private-key-and-root-certificate)
 
 [Github Issue regarding using external CA certificates](https://github.com/hashicorp/consul/issues/11598)
-
-[Readme from unmerged PR](https://github.com/hashicorp/consul/blob/d9185d2a96c68fdb2b413f1d929624da6b1e0906/website/content/docs/connect/ca/vault.mdx#using-an-external-root-ca)
-
 
 [Code path for Vault CA Provider](https://github.com/hashicorp/consul/blob/main/agent/connect/ca/provider_vault.go#L565)
 
