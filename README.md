@@ -11,15 +11,19 @@ It will step through
 ### Example Steps Using OpenSSL
 
 1. Create a CA
-Run the `generate_ca.sh` command, this will output the 
+Run the `01-generate_ca.sh` command, this will output the 
 
 2. Generate the intermediate from Vault
-Run the `generate_vault_ca_csr_intermediate.sh` command
+Run the `02-generate_vault_ca_csr_intermediate.sh` command
 This will create the CSR for the intermediate that will be stored in Vault.
 
 3. Sign the intermediate 
 
-Run the `sign_intermediate.sh` command
+Run the `03-sign_intermediate.sh` command
+
+4. Create the PEM bundle and push it to Vault.
+
+Run `04-bundle_to_vault.sh`
 
 
 
