@@ -11,9 +11,11 @@ It will step through
 ### Example Steps Using OpenSSL
 
 1. Create a CA
+
 Run the `01-generate_ca.sh` command, this will output the 
 
 2. Generate the intermediate from Vault
+
 Run the `02-generate_vault_ca_csr_intermediate.sh` command
 This will create the CSR for the intermediate that will be stored in Vault.
 
@@ -25,7 +27,19 @@ Run the `03-sign_intermediate.sh` command
 
 Run `04-bundle_to_vault.sh`
 
+5. Update Consul CA Config
 
+Update the `config/vault-ca-config.json` file with an appropriate token that gives it access to the root and intermedaite directories. In this case we can run the below and use the returned secret ID:
+
+```
+vault policy write consul-pki-backend ./config/vault-connect-policy.pol
+vault token create -policy consul-pki-backend
+```
+
+Run `05-configure-consul`
+
+This will configure consul with the new Vault CA backend. 
+An intermediate will be created and cross signed with the Consul CA. 
 
 #### Issues
 
