@@ -39,7 +39,7 @@ vault policy write consul-pki-backend ./config/vault-connect-policy.pol
 vault token create -policy consul-pki-backend
 ```
 
-Run `05-configure-consul`
+Run `05-configure-consul.sh`
 
 This will configure consul with the new Vault CA backend. 
 An intermediate will be created and cross signed with the Consul CA. 
