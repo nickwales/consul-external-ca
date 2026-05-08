@@ -2,11 +2,14 @@
 
 This repo provides guidance for using an external/offline CA for Consul's Mesh certificates.
 
-It will step through
+It will step you through:
 - Generating a CA
 - Creating a PKI mount point in Vault
 - Creating a CSR intermediate from the mount point
 - Signing the CSR and uploading to the mount point
+- Creating a Vault token and updating Consul CA authority config
+
+The currently unpublished documentation is available [here](https://github.com/hashicorp/consul/blob/d9185d2a96c68fdb2b413f1d929624da6b1e0906/website/content/docs/connect/ca/vault.mdx#using-an-external-root-ca). Publishing is a priority!
 
 ### Example Steps Using OpenSSL
 
