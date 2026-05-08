@@ -1,0 +1,26 @@
+
+resource "vault_policy" "consul-ca-self-signed" {
+  name = "consul-ca-self-signed"
+
+  policy = <<EOT
+path "connect/+/*" {
+  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
+path "/sys/mounts/connect/*" {
+  capabilities = [ "create", "read", "update", "delete", "list" ]
+}
+
+path "/sys/mounts/connect/*/tune" {
+  capabilities = [ "update" ]
+}
+
+path "auth/token/renew-self" {
+  capabilities = [ "update" ]
+}
+
+path "auth/token/lookup-self" {
+  capabilities = [ "read" ]
+}
+EOT
+}
