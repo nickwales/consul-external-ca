@@ -7,4 +7,4 @@
 vault secrets enable -path=connect/root_self_signed pki
 cert=$(vault write -force -format json connect/root_self_signed/intermediate/generate/internal | jq -r .data.csr)
 
-echo "$cert" > csr/vault_intermediate_3.csr
+echo "$cert" > csr/vault_intermediate.csr
