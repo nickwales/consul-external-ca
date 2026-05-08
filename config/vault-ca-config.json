@@ -1,0 +1,18 @@
+{
+  "Provider": "vault",
+  "Config": {
+    "Address": "https://vault.host.name:8200",
+    "IntermediateCertTTL": "8760h",
+    "IntermediatePKIPath": "connect/intermediate_self_signed",
+    "LeafCertTTL": "72h",
+    "PrivateKeyBits": 4096,
+    "PrivateKeyType": "rsa",
+    "RootPKIPath": "connect/root_self_signed",
+    "RotationPeriod": "2160h",
+    "Token": "<vault-token>"
+  },
+  "State": null,
+  "ForceWithoutCrossSigning": false,
+  "CreateIndex": 10,
+  "ModifyIndex": 15884214
+}
